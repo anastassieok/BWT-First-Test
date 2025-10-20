@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Наши контакты</title>
+</head>
+
+<body>
+
+    <table border="1" width="1330">
+        <tr>
+            <td width="200" height="630" valign="top">
+                <h1 align="center">Ресторан RUSKI</h1>
+                <h2 align="center">Навигация</h2>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="../main_page/index.html" target="_self">
+                                <img src="../main_page/home.webp" alt="Главная страница" width="20" height="20">
+                            </a>
+                        </li>
+                        <li><a href="../menu/index.html" target="_self">Меню</a></li>
+                        <li><a href="../order/index.html" target="_self">Забронировать стол</a></li>
+                        <li><strong><a href="../contacts/index.html" target="_self">Контакты</a></strong></li>
+                        <li><a href="../info/index.html" target="_self">О нас</a></li>
+                        <li><a href="../fr/index.html" target="_blank">Франшиза</a></li>
+                        <li><a href="../info/index.html#advantages" target="_self">Наши преимущества</a></li>
+                    </ul>
+                </nav>
+            </td>
+            <td valign="top">
+                <h3>Контакты</h3>
+                <p>Москва-сити, Башня ОКО | 85 этаж</p>
+                <p>Ruski | 354 Exclusive height</p>
+                <p>+7(495)XXXXXXX</p>
+                <p>ruskirestaurant@smth.com</p>
+                <p></p>
+                <h3>Задать вопрос или предложить рекомендации</h3>
+                <form action="https://www.bing.com/search?" id="myForm" name="UserEnter" target="_blank">
+                    <p>Фамилия: <input type="Text" name="last_name" size=20></p>
+                    <p>Имя: <input type="Text" name="first_name" size=20></p>
+                    <p>Ваша электронная почта: <input type="Text" name="email" size=20></p>
+                    <p>Ваш номер телефона: <input type="Text" name="phone" size=20></p>
+
+                    <input type="hidden" name="function" value="page">
+                    <input type="hidden" name="page_id" value="3">
+                    <input type="hidden" id="submitTime" name="submitTime">
+
+                    <p>
+                        <input type="Reset" name="Reset" value="Обновить">
+                        <input type="Submit" name="submit" value="Отправить">
+                    </p>
+                </form>
+
+            </td>
+        </tr>
+    </table>
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function (e) {
+            // Устанавливаем время отправки
+            const now = new Date();
+            document.getElementById('submitTime').value = now.toISOString();
+
+            // Для отладки - можно посмотреть что отправляется
+            console.log('Время отправки:', now.toISOString());
+        });
+    </script>
+</body>
+
+
+</html>
