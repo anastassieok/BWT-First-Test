@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Главная</title>
+    <title>Оформление брони</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
                             </a>
                         </li>
                         <li><a href="../menu/index.html" target="_self">Меню</a></li>
-                        <li><a href="../order/index.html" target="_self">Забронировать стол</a></li>
+                        <li><strong><a href="../order/index.html" target="_self">Забронировать стол</a></strong></li>
                         <li><a href="../contacts/index.html" target="_self">Контакты</a></li>
                         <li><a href="../info/index.html" target="_self">О нас</a></li>
                         <li><a href="../fr/index.html" target="_blank">Франшиза</a></li>
@@ -29,16 +29,45 @@
                     </ul>
                 </nav>
             </td>
-            <td valign="top">
-                <h3 align="center">Главная</h3>
-                <h4>Видовой ресторан Ruski расположен на крыше башни "Око" Москва-сити. Блюда русской кухни адаптированы
-                    к современным вкусам. Элегантная и современная атмосфера Ruski как нельзя лучше соответствует духу
-                    ресторана, предлагающего своим гостям традиционные блюда русской кухни.</h4>
-                <p>Кликните ниже для просмотра альбома фото</p>
-                <a href="https://yandex.ru/maps/org/ruski/200818672869/gallery/?ll=37.534092%2C55.749380&z=13"
-                    target="_blank">
-                    <img src="./restaurant ad.jpg" width="1050" align="center" vspace="20" id="for_click">
-                </a>
+            <td valign="top" margin="50">
+                <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+                    <h3>Оформление брони</h3>
+                    <p>Фамилия: <input type="Text" name="last_name" size=20></p>
+                    <p>Имя: <input type="Text" name="first_name" size=20></p>
+                    <p>Количество гостей: <input type="Number" name="age" size=20></p>
+                    <p>Город:
+                        <input type="Radio" name="place" value="Moscow">Ресторан в Москве
+                        <input type="Radio" name="place" value="Yaroslavl" checked>Ресторан в Ярославле
+                    </p>
+                    <p>Предпочтения:
+                        <input type="Checkbox" name="experience" checked>Первое блюдо
+                        <input type="Checkbox" name="experience" checked>Второе блюдо
+                        <input type="Checkbox" name="experience" checked>Десерт
+                    </p>
+                    <p>Дата: <input type="date" name="user_date"></p>
+                    <p>Время: <input type="time" name="user_time"></p>
+                    <p> Телефон:
+                        <br>
+                        <TEXTAREA cols=80 rows=4 name="textarea">+7</TEXTAREA>
+                    </p>
+
+                    <p> Добавьте комментарий по желанию:
+                        <br>
+                        <TEXTAREA cols=80 rows=4 name="textarea">Здравствуйте!</TEXTAREA>
+                    </p>
+                    <p>Пароль: <input type="Password" name="password" size=9 value="123"></p>
+
+                    <input type="hidden" name="function" value="page">
+                    <input type="hidden" name="page_id" value="3">
+
+                    <p>
+                        <input type="Reset" name="Reset" value="Обновить">
+                        <input type="Submit" name="submit" value="Отправить">
+                    </p>
+
+
+                </form>
+
             </td>
         </tr>
     </table>
