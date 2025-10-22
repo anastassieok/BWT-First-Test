@@ -48,7 +48,7 @@
                     <p>Время: <input type="time" name="user_time"></p>
                     <p> Телефон:
                         <br>
-                        <TEXTAREA cols=80 rows=4 name="textarea">+7</TEXTAREA>
+                        <TEXTAREA cols=80 rows=4 name="textarea">
                     </p>
 
                     <p> Добавьте комментарий по желанию:
@@ -71,9 +71,15 @@
             </td>
         </tr>
     </table>
+     <script>
+        document.getElementById('myForm').addEventListener('submit', function (e) {
+         const now = new Date();
+            document.getElementById('submitTime').value = now.toISOString();
+            console.log('Время отправки:', now.toISOString());
+        });
+    </script>                    
 
 </body>
-<script src="../JS/edit.js"></script>
-
 
 </html>
+
