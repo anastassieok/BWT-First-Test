@@ -58,18 +58,16 @@
     </table>
     <script>
         document.getElementById('myForm').addEventListener('submit', function (e) {
-            // Устанавливаем время отправки
-            const now = new Date();
+         const now = new Date();
             document.getElementById('submitTime').value = now.toISOString();
-
-            // Для отладки - можно посмотреть что отправляется
             console.log('Время отправки:', now.toISOString());
         });
     </script>
-</body>
+</body>   
 
 
 
 </html>
+
 
 
