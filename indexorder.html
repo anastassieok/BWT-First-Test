@@ -34,7 +34,7 @@
                     <h3>Оформление брони</h3>
                     <p>Фамилия: <input type="Text" name="last_name" size=20></p>
                     <p>Имя: <input type="Text" name="first_name" size=20></p>
-                    <p>Количество гостей: <input type="Number" name="age" size=20></p>
+                    <p>Количество гостей: <input type="Number" name="guest_number" size=20></p>
                     <p>Город:
                         <input type="Radio" name="place" value="Moscow">Ресторан в Москве
                         <input type="Radio" name="place" value="Yaroslavl" checked>Ресторан в Ярославле
@@ -72,16 +72,40 @@
         </tr>
     </table>
      <script>
-        document.getElementById('UserEnter').addEventListener('submit', function (e) {
-         const now = new Date();
-            document.getElementById('submitTime').value = now.toISOString();
-            console.log('Время отправки:', now.toISOString());
-        });
+        document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('UserEnter');
+    const timeField = document.getElementById('submitTime');
+    if (!form) {
+        console.error('Форма не найдена');
+        return;
+    }
+    if (!timeField) {
+        console.error('Поле submitTime не найдено');
+        return;
+    }
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const now = new Date();
+        timeField.value = now.toISOString();
+        console.log('Оформление брони');
+        console.log('Время отправки:', timeField.value);
+        console.log('Фамилия:', this.last_name.value);
+        console.log('Имя:', this.first_name.value);
+        console.log('Количество гостей:', this.guest_number.value);
+        console.log('Дата брони:', this.user_date.value);
+        console.log('Время брони:', this.user_time.value);
+        console.log('Телефон:', this.phone.value);
+        console.log('Комментарий:', this.comment.value);
+        console.log('Кодовое слово:', this.password.value);
+       
+    });
+});
     </script>                    
 
 </body>
 
 </html>
+
 
 
 
